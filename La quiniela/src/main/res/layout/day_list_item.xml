@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="6dp"
+    >
+
+    <TextView
+        android:id="@+id/equipoLocal"
+        style="@style/day_title"
+
+        android:layout_width="123dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/equipoVisitante"
+        style="@style/day_title"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/puntuacion"
+        style="@style/day_title"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
+</LinearLayout>

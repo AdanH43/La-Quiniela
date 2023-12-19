@@ -33,8 +33,9 @@ public class JornadaAdapter extends RecyclerView.Adapter<JornadaViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull JornadaViewHolder holder, int position) {
         //TODO: fill data
-       holder.setDay(this.mList.get(position).getDay());
-       holder.setPrice(this.mList.get(position).getPrice());
+       holder.setTvEquipoLocal(this.mList.get(position).getEquipoLocal());
+       holder.setTvEquipoVisitante(this.mList.get(position).getEquipoVisitante());
+       holder.setTvPuntuacion(this.mList.get(position).getPuntuacion());
 
 
     }

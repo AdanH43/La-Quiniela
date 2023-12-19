@@ -23,7 +23,6 @@ import okhttp3.Response;
 public class Peticion {
     //ESTADO
     //Clase utilidad que no necesita nada más que poner a funcionar la peticion HTTPs
-    private static final String API_KEY = "&api_key=PONERTUAPIKEY";
     //COMPORTAMIENTO
     public Peticion() {
 
@@ -34,7 +33,7 @@ public class Peticion {
 
         //construimos la peticion
         Request peticion = new Request.Builder()
-                .url(URL+API_KEY)
+                .url(URL)
                 .get()
                 .addHeader("cache-control", "no-cache")
                 .build();

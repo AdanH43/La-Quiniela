@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(MainActivity.this, "Consiguiendo datos de la loteria", Toast.LENGTH_LONG).show();
+        MainController.getSingleton().requestDataFromNasdaq();
 
         // Get a handle to the RecyclerView.
         mRecyclerView = findViewById(R.id.rv_prices);
@@ -41,15 +43,6 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         // Give the RecyclerView a default layout manager.
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        Button generar = (Button) findViewById(R.id.b_getData);
-        generar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Getting data from Nasdaq Servers...", Toast.LENGTH_LONG).show();
-                MainController.getSingleton().requestDataFromNasdaq();
-            }
-        });
 
         MainActivity.myActiveActivity = this;
         MainController.setActivity(this);
@@ -66,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         }
         mAdapter.notifyDataSetChanged();
         TextView tv = (TextView) findViewById(R.id.tv_oilDesc);
-        tv.setText("Nasdaq Oil Prices: 30 rows");
+        tv.setText("La Quiniela");
     }
 
     public void errorData(String error) {
